@@ -1,5 +1,8 @@
 FROM armhf/debian:jessie
-RUN apt-get update && apt-get install wget
+
+# Install packages
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && apt-get -y install supervisor wget
 RUN wget https://dl.minio.io/server/minio/release/linux-arm/minio && chmod +x minio
 EXPOSE 80 9000
 CMD ./minio server ~/Photos
