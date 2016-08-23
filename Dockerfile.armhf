@@ -1,5 +1,5 @@
 FROM armhf/debian:jessie
-RUN apt-get install wget
+RUN apt-get update && apt-get install wget
 RUN wget 	https://dl.minio.io/server/minio/release/linux-arm/minio && chmod +x minio
 EXPOSE 80 9000
 CMD ./minio server ~/Photos
