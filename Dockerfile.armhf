@@ -1,4 +1,10 @@
 FROM armhf/debian:jessie
+MAINTAINER Lavvy
+
+
+#configuring custom enviroments 
+ENV MINIO_ACCESS_KEY AKIAIOSFODNN7EXAMPLE
+ENV MINIO_SECRET_KEY wJalrXUtnFEMI/K7MDENGbPxRfiCYEXAMPLEKEY
 
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
